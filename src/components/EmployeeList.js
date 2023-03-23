@@ -7,16 +7,16 @@ class EmployeeList extends Component{
     }
 
 render(){
-    let filterEmployee = this.props.employee.filter(
-        (employee) => {
-            return 
-            employee.name.first.indexOf(this.state.search) !== -1;
-        }
-    )
+    // let filterEmployee = this.props.employee.filter(
+    //     (employee) => {
+    //         return 
+    //         employee.name.first.indexOf(this.state.search) !== -1;
+    //     }
+    // );
     return(
         <div className='text-center'>
             <br></br>
-            <input type="text"value={this.state.search}/>Search by EmployeeAPI
+            <input type="text" value={this.state.search}/>Search by EmployeeAPI
             <div className='col-md-12'>
                 <ul>
                     <div className='row'>
@@ -26,10 +26,10 @@ render(){
                         <p className='col-md-2 font'>Location</p>
                         <p className='col-md-2 font'>Email</p>
                     </div>
-                    {filterEmployee.map((employee) =>{
+                    {/* {filterEmployee.map((employee) =>{
                         return 
                         <Employee employee={employee} key={employee.id} />
-                    })}
+                    })} */}
                 </ul>
             </div>
         </div>
