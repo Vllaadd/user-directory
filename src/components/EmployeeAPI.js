@@ -11,7 +11,7 @@ class EmployeeAPI extends Component{
     componentDidMount(){
         axios.get("https://randomuser.me/api/?results=200&nat=us")
             .then(res =>{
-                const employee = res.results;
+                const employee = res.data.results;
                 console.log(employee);
                 this.setState({employee: employee});
             })
