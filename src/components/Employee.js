@@ -5,7 +5,7 @@ class Employee extends Component{
         return(
             <li className='list-group-item'>
                 <div className='row'>
-                    <img src={this.props.employee.picture.thumbnain} alt="employee profile"></img>
+                    <img src={this.props.employee.picture.thumbnail} alt="employee profile"></img>
                     <p className='col-md-2'>{this.props.employee.name.first}</p>
                     <p className='col-md-2'>{this.props.employee.name.last}</p>
                     <p className='col-md-2'>{this.props.employee.location.state}</p>
