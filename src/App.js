@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import EmployeeAPI from './components/EmployeeAPI';
+import EmployeeAPI from './components/EmployeeAPI.js';
 
 function App() {
   return (

@@ -4,15 +4,17 @@ import Employee from "./Employee";
 class EmployeeList extends Component{
     constructor(props){
         super(props);
+        this.state = {
+            search: ''
+        }
     }
 
 render(){
-    // let filterEmployee = this.props.employee.filter(
-    //     (employee) => {
-    //         return 
-    //         employee.name.first.indexOf(this.state.search) !== -1;
-    //     }
-    // );
+    let filterEmployee = this.props.employee.filter(
+        (employee) => {
+            return employee.name.first.indexOf(this.state.search) !== -1;
+        }
+    );
     return(
         <div className='text-center'>
             <br></br>
@@ -26,10 +28,9 @@ render(){
                         <p className='col-md-2 font'>Location</p>
                         <p className='col-md-2 font'>Email</p>
                     </div>
-                    {/* {filterEmployee.map((employee) =>{
-                        return 
-                        <Employee employee={employee} key={employee.id} />
-                    })} */}
+                    {filterEmployee.map((employee) =>{
+                        return <Employee employee={employee} key={employee.id} />
+                    })}
                 </ul>
             </div>
         </div>
