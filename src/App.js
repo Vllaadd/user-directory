@@ -5,7 +5,7 @@ import EmployeeAPI from './components/EmployeeAPI.js';
 function App() {
   return (
     <div className="App">
-    <EmployeeAPI/>
+    <EmployeeAPI />
     </div>
   );
 }
