@@ -30,15 +30,13 @@ class EmployeeList extends Component {
                                 <th className='col-md-2 font'>Location</th>
                                 <th className='col-md-2 font'>Email</th>
                             </tr>
-                            <tr>
-                               
+                            
                                {filterEmployee.map((employee) => {
                                     return  <td>
                                     <Employee employee={employee} key={employee.id} />
                                     </td> 
                                 })}
                                 
-                            </tr>
                         </table>
                     </div>
                 </div>
