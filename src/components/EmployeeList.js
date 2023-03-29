@@ -1,15 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import axios from 'axios';
 
-class EmployeeList extends Component {
-    constructor(props) {
-        super(props);
+class EmployeeList extends React.Component {
 //set initial state•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
-        this.state = {
+        state = {
             users: [],
             search: ''
         }
-    }
 
 // once the component mounts, send a get request••••••••••••••••••••••••••••••••••••
     componentDidMount(){
@@ -49,9 +46,9 @@ class EmployeeList extends Component {
                 .map((user, index) => {
                     return(
                         <tr key={index}>
-                            <td>
+                            {/* <td>
                                 <img src={user.image} alt='user'></img>
-                            </td>
+                            </td> */}
                             <td>{user.first}</td>
                             <td>{user.last}</td>
                             <td>{user.email}</td>
