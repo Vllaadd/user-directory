@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import Employee from "./Employee";
 
 class EmployeeList extends Component {
     constructor(props) {
