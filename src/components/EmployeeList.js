@@ -33,7 +33,8 @@ class EmployeeList extends Component {
 
 // filtering the list to show only first and last name••••••••••••••••••••••••••••••
     filteredUsers(){
-        const search = this.state.filter(user =>{
+        const search = this.state.search.toLowerCase();
+        return this.state.filter(user => {
             return (
                 user.first.toLowerCase().includes(search) ||
                 user.last.toLowerCase().includes(search)
