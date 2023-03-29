@@ -46,7 +46,6 @@ class EmployeeList extends Component {
 //rendering the table of users••••••••••••••••••••••••••••••••••••••••••••••••••••••
         renderUsers = () => {
             return this.filteredUsers()
-                .sort(this.sortUsers)
                 .map((user, index) => {
                     return(
                         <tr key={index}>
