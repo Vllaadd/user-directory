@@ -10,5 +10,6 @@ class EmployeeList extends Component {
         }
     }
  
+}
 
 export default EmployeeList;
