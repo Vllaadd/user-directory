@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
-import EmployeeAPI from './components/EmployeeAPI.js';
+// import EmployeeAPI from './components/EmployeeAPI.js';
+import EmployeeList from './components/EmployeeList';
 
 function App() {
   return (
     <div className="App">
-    <EmployeeAPI />
+    <EmployeeList />
     </div>
   );
 }

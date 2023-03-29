@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Employee from "./Employee";
+// import Employee from "./Employee";
 
 class EmployeeList extends Component {
     constructor(props) {
@@ -59,6 +59,24 @@ class EmployeeList extends Component {
                         </tr>
                     )
                 })
+        }
+
+        render(){
+            return(
+                <>
+                <input placeholder='Search' />
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>First</th>
+                            <th>Last</th>
+                        </tr>
+                    </thead>
+                </table>
+                </>
+                
+            )
         }
 
 
