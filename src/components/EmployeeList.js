@@ -22,8 +22,22 @@ class EmployeeList extends Component {
                 <input type="text" value={this.state.search} />Search by EmployeeAPI
                 <div className='col-md-12'>
                     <br></br>
-                    <div id='tableHeader'></div>
-                    <tableEmployee />
+                    <table>
+                            <tr>
+                                <th className='col-md-2 font'>Image</th>
+                                <th className='col-md-2 font'>First Name</th>
+                                <th className='col-md-2 font'>Last Name</th>
+                                <th className='col-md-2 font'>Location</th>
+                                <th className='col-md-2 font'>Email</th>
+                            </tr>
+                            
+                               {filterEmployee.map((employee) => {
+                                    return  <td>
+                                    <Employee employee={employee} key={employee.id} />
+                                    </td> 
+                                })}
+                                
+                        </table>
                 </div>
             </div>
         )
