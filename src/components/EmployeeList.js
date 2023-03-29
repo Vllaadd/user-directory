@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Employee from "./Employee";
-import tableEmployee from "./tableEmployee";
 
 class EmployeeList extends Component {
     constructor(props) {
