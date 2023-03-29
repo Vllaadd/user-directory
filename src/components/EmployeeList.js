@@ -23,7 +23,9 @@ class EmployeeList extends React.Component {
                         }
                         
                     });
+                    console.log(userArray[0]);
                     this.setState({users:userArray});
+                    
             })
             .catch(err => console.log(err));
         }
