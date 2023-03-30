@@ -44,8 +44,7 @@ class EmployeeList extends React.Component {
 
 //rendering the table of users••••••••••••••••••••••••••••••••••••••••••••••••••••••
         renderUsers = () => {
-            return this.filteredUsers()
-                .map((user, index) => {
+            return this.map((user, index) => {
                     return(
                         <tr key={index}>
                             {/* <td>
