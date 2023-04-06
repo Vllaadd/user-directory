@@ -8,13 +8,10 @@ class UserList extends Component {
             search: ''
         }
     }
-
-    render() { let filterUser = this.props.user.filter((user) => {
-                return user.name.first.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
-            })
-
-    return (
-    <ul>
+    render() {
+        return (
+            <div>
+            <ul>
             <br></br>
             <div className="row">
                 <p className="col-md-2 font">Image</p>
@@ -24,15 +21,15 @@ class UserList extends Component {
                 <p className="col-md-2 font">Email</p>
             </div>
             {
-            filterUser.map((user) => {
+            this.map((user) => {
                 return <User user={user} key={user.id} /> })
             }
-
         </ul>
+        </div>
     )
     }
-
-}
+    
+    }
 
 
 export default UserList;
