@@ -1,7 +1,6 @@
-import { extend } from 'jquery';
-import React from 'react';
+import React, { Component } from 'react';
 
-class Employee extends Component{
+class User extends Component{
     render(){
         return (
             <li>
@@ -16,4 +15,4 @@ class Employee extends Component{
     }
 }
 
-export default Employee;
+export default User;
