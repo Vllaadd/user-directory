@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import EmployeeList from './EmployeeList';
-import Employee from './Employee';
 
 class EmployeeAPI extends Component{
     state = {
