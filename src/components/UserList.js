@@ -9,12 +9,9 @@ class UserList extends Component {
         }
     }
 
-    render() {
-        let filterEmployee = this.props.employee.filter(
-            (employee) => {
-                return employee.name.first.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
-            }
-        );
+    render() { let filterUser = this.props.user.filter((user) => {
+                return user.name.first.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+            })
 
     return (
     <ul>
@@ -26,9 +23,11 @@ class UserList extends Component {
                 <p className="col-md-2 font"><button onClick={this.sortLocation}>Location</button></p>
                 <p className="col-md-2 font">Email</p>
             </div>
-            {filterEmployee.map((employee) => {
-                return <Employee employee={employee} key={employee.id} />
-            })}
+            {
+            filterUser.map((user) => {
+                return <User user={user} key={user.id} /> })
+            }
+
         </ul>
     )
     }
@@ -36,4 +35,4 @@ class UserList extends Component {
 }
 
 
-export default EmployeeList;
+export default UserList;
