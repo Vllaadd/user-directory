@@ -2,11 +2,14 @@ import React from 'react';
 import axios from 'axios';
 
 class EmployeeList extends React.Component {
-//set initial state•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
-        state = {
-            users: [],
+    constructor(props){
+        super(props);
+        this.state={
             search: ''
         }
+    }
+//set initial state•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
 
 // once the component mounts, send a get request••••••••••••••••••••••••••••••••••••
     componentDidMount(){
