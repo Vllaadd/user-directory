@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-class MyComponent extends Component {
+class GptExample extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: []
+      user: []
     };
   }
 
   componentDidMount() {
-    axios.get('https://jsonplaceholder.typicode.com/users')
-      .then(response => {
-        this.setState({ data: response.data });
+    axios.get('https://randomuser.me/api/?results=200&nat=us')
+      .then(res => {
+        this.setState({ user: res.user });
       })
       .catch(error => {
         console.log(error);
@@ -24,8 +24,8 @@ class MyComponent extends Component {
       <div>
         <h1>Users</h1>
         <ul>
-          {this.state.data.map(user => (
-            <li key={user.id}>{user.name}</li>
+          {this.state.data.user.map(data => (
+            <li key={data.id}>{data.name}</li>
           ))}
         </ul>
       </div>
@@ -33,4 +33,4 @@ class MyComponent extends Component {
   }
 }
 
-export default MyComponent;
+export default GptExample;
