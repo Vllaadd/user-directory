@@ -2,12 +2,6 @@ import React, { Component } from 'react';
 import User from './User';
 
 class UserList extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            search: ''
-        }
-    }
     render() {
         return (
             <div>
@@ -20,7 +14,7 @@ class UserList extends Component {
                 <p className="col-md-2 font"><button>Location</button></p>
                 <p className="col-md-2 font">Email</p>
             </div>
-             <User user={this.state.user} /> 
+             <User /> 
         </ul>
         </div>
         )

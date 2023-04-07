@@ -5,11 +5,11 @@ class User extends Component{
         return (
             <li>
                 <div className='row'>
-                <p>{this.props.user.name.first}</p>
+                <p>{this.user.name.first}</p>
                 <p>{this.props.user.name.last}</p>
                 <p>{this.props.user.location.state}</p>
                 <p>{this.props.user.email}</p>
-            </div>
+                </div>
             </li>
         );
     }
