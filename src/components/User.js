@@ -5,10 +5,10 @@ class User extends Component{
         return (
             <li>
                 <div className='row'>
-                <p>{this.props.employee.name.first}</p>
-                <p>{this.props.employee.name.last}</p>
-                <p>{this.props.employee.location.state}</p>
-                <p>{this.props.employee.email}</p>
+                <p>{this.props.user.name.first}</p>
+                <p>{this.props.user.name.last}</p>
+                <p>{this.props.user.location.state}</p>
+                <p>{this.props.user.email}</p>
             </div>
             </li>
         );

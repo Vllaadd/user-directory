@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import UserList from './components/UserList';
+import UserAPI from './components/UserAPI';
 
 function App() {
   return (
     <div className="App">
-    <UserList />
+    <UserAPI />
     </div>
   );
 }
