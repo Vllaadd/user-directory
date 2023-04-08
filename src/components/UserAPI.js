@@ -4,16 +4,19 @@ import UserList from './UserList';
 
 class UserAPI extends Component{
     state = {
-        user: []
+        users: []
     }
 
     componentDidMount(){
         axios.get('https://randomuser.me/api/?results=200&nat=us')
         .then(res => {
-            const user = res.data.results;
-            console.log(user);
-            this.setState({user:user});
+            const users = res.data.results;
+            console.log(users);
+            this.setState({users});
         })
+        .catch(err =>{
+            console.log(err)
+        });
     }
     render(){
         return(

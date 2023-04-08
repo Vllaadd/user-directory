@@ -5,7 +5,6 @@ class CountriesList extends Component {
     state = {
       countries: []
     };
-  }
 
   componentDidMount() {
     axios.get('https://restcountries.com/v3.1/all')
@@ -19,7 +18,7 @@ class CountriesList extends Component {
   }
 
   render() {
-    const {countries} = this.state;
+    const { countries } = this.state;
     return (
       <div>
         <table>
@@ -29,7 +28,6 @@ class CountriesList extends Component {
               <th>Capital</th>
               <th>Population</th>
               <th>Region</th>
-              <th>Flag</th>
             </tr>
           </thead>
         <tbody>
