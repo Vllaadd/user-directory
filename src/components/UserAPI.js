@@ -19,8 +19,9 @@ class UserAPI extends Component{
         });
     }
     render(){
+        const { users } = this.state;
         return(
-            <UserList user = {this.state.user} />
+            <UserList users = {users} />
         )
     }
 }
