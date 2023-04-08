@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 class User extends Component{
     render(){
+        const countries = this.props.countries;
         return (
             <li>
                 <div className='row'>

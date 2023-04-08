@@ -4,19 +4,25 @@ import User from './User';
 class UserList extends Component {
     render() {
         return (
-            <div>
-            <ul>
-            <br></br>
-            <div className="row">
-                <p className="col-md-2 font">Image</p>
-                <p className="col-md-2 font"><button>First Name</button></p>
-                <p className="col-md-2 font">Last Name</p>
-                <p className="col-md-2 font"><button>Location</button></p>
-                <p className="col-md-2 font">Email</p>
-            </div>
-             <User /> 
-        </ul>
-        </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {users.map((user) => (
+                         <tr key={user.results.name}>
+                        <td>{user.results.name.first}</td>
+                        <td>{user.results.name.last}</td>
+                        <td>{user.results.location.email}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+             
         )
     }
     
