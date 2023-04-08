@@ -27,7 +27,7 @@ class CountriesList extends Component {
         <h1>Countries list</h1>
         <ul>
             {countries.map(country =>(
-                <li key={country.id}>{country.name}</li>
+                <li key={country.name.common}>{country.name.common}</li>
             ))}
         </ul>
       </div>

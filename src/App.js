@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import DaysList from './components/DaysList';
+import CountriesList from './components/CountriesList';
 // import UserAPI from './components/UserAPI';
 
 function App() {
   return (
     <div className="App">
-    <CountrieList />
+    <CountriesList />
     </div>
   );
 }
