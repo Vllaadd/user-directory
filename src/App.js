@@ -6,7 +6,7 @@ import CountriesList from './components/CountriesList';
 function App() {
   return (
     <div className="App">
-    <UserList />
+    <UserAPI />
     </div>
   );
 }
