@@ -2,10 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 class CountriesList extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
+    state = {
       countries: []
     };
   }
@@ -13,7 +10,8 @@ class CountriesList extends Component {
   componentDidMount() {
     axios.get('https://restcountries.com/v3.1/all')
       .then(response => {
-        this.setState({ countries: response.data });
+        const countries = response.data;
+        this.setState({ countries });
       })
       .catch(error => {
         console.log(error);
@@ -24,13 +22,28 @@ class CountriesList extends Component {
     const {countries} = this.state;
     return (
       <div>
-        <h1>Countries list</h1>
-        <ul>
-            {countries.map(country =>(
-                <li key={country.name.common}>{country.name.common}</li>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Capital</th>
+              <th>Population</th>
+              <th>Region</th>
+              <th>Flag</th>
+            </tr>
+          </thead>
+        <tbody>
+        {countries.map(country =>(
+                <tr key={country.name.common}>
+                  <td>{country.name.common}</td>
+                  <td>{country.capital}</td>
+                  <td>{country.population}</td>
+                  <td>{country.region}</td>
+                  </tr>
             ))}
-        </ul>
-      </div>
+       </tbody>
+       </table>
+       </div>
     );
   }
 }
