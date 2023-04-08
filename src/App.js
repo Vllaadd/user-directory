@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
-import GptExample from './components/GptExample';
+import DaysList from './components/DaysList';
 // import UserAPI from './components/UserAPI';
 
 function App() {
   return (
     <div className="App">
-    {/* <UserAPI /> */}
-    <GptExample />
+    <DaysList />
     </div>
   );
 }
