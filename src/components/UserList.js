@@ -1,16 +1,30 @@
 import React, { Component } from 'react';
 
 class UserList extends Component {
-    render() {
-        const users = this.props.users;
+    state={
+        searchInput: ''
+    }
 
+    handleInputChange = (event) =>{
+        this.setState({searchInput: event.target.value});
+    }
+
+
+    render() {
+        const {users} = this.props;
+        const {searchInput} = this.state;
 //sort the users array by first name
-        users.sort((a, b) => {
-            if(a.name.first < b.name.first) return -1;
-            if(a.name.first > b.name.first) return 1;
-            return 0;
-        });
+        const filteredUsers = users.filter(user =>
+            user.name.first.toLowerCase().includes(searchInput.toLowerCase()) ||
+            user.name.last.toLowerCase().includes(searchInput.toLowerCase())
+        );
+
         return (
+            <>
+            <div>
+                <label htmlFor='searchInput'>Search: </label>
+                <input type='text' id='searchInput' onChange={this.handleInputChange} />
+            </div>
             <table>
                 <thead>
                     <tr>
@@ -20,7 +34,7 @@ class UserList extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {users.map((user) => (
+                    {filteredUsers.map((user) => (
                         <tr key={user.name}>
                         <td>{user.name.first}</td>
                         <td>{user.name.last}</td>
@@ -29,7 +43,7 @@ class UserList extends Component {
                     ))}
                 </tbody>
             </table>
-             
+             </>
         )
     }
     
