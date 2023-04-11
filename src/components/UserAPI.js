@@ -8,7 +8,8 @@ class UserAPI extends Component{
     }
 
     componentDidMount(){
-        axios.get('https://randomuser.me/api/?results=200&nat=us')
+        axios
+        .get('https://randomuser.me/api/?results=200&nat=us')
         .then(res => {
             const users = res.data.results;
             console.log(users);

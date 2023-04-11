@@ -14,10 +14,10 @@ class UserList extends Component {
                 </thead>
                 <tbody>
                     {users.map((user) => (
-                         <tr key={user.data.name}>
-                        <td>{user.data.name.first}</td>
-                        <td>{user.data.name.last}</td>
-                        <td>{user.data.location.email}</td>
+                        <tr key={user.results.name}>
+                        <td>{user.results.name.first}</td>
+                        <td>{user.results.name.last}</td>
+                        <td>{user.resuls.location.email}</td>
                         </tr>
                     ))}
                 </tbody>
