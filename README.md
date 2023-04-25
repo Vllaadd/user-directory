@@ -17,11 +17,11 @@ Install the project dependencies by running npm install in your terminal.
 
 ## Usage 
 
-2. Start the project by running npm start.
-3. Navigate to the search bar and input the first name of the user you want to find.
-4. As you type, the application will filter the user list to display only those users whose first name matches your input.
-5. The user list displays each user's first and last name, email address, and location, allowing you to easily find and view the information you need.
-6. To clear the filter and display the full user list, simply delete the input in the search bar. 
+1. Start the project by running npm start.
+2. Navigate to the search bar and input the first name of the user you want to find.
+3. As you type, the application will filter the user list to display only those users whose first name matches your input.
+4. The user list displays each user's first and last name, email address, and location, allowing you to easily find and view the information you need.
+5. To clear the filter and display the full user list, simply delete the input in the search bar. 
 
 
 
