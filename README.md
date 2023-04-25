@@ -1,6 +1,6 @@
 # User Directory
 
-A simple webpage that showcases my work, projects, and contact information . 
+User Directory is a React-based application that allows users to easily search and filter through a list of users by their first name. By utilizing the Axios library and an API, the application is able to dynamically retrieve and display user information, including first and last name, email address, and location. With a simple and intuitive interface, User Directory provides users with a streamlined and convenient way to access the information they need.
 
 ## Tech Stack 
 
