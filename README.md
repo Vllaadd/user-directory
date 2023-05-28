@@ -11,6 +11,14 @@ User Directory is a React-based application that allows users to easily search a
 5. React 
 6. Axios
 
+## Methods used in the project
+
+• axios
+• .get()
+• setState({})
+• .includes()
+• onChange={}
+
 ## Installation 
 
 Install the project dependencies by running npm install in your terminal.
