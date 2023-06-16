@@ -13,7 +13,7 @@ class UserList extends Component {
     render() {
         const {users} = this.props;
         const {searchInput} = this.state;
-//sort the users array by first name
+//FILTER USERS BY FIRST OR LAST NAME
         const filteredUsers = users.filter(user =>
             user.name.first.toLowerCase().includes(searchInput.toLowerCase()) ||
             user.name.last.toLowerCase().includes(searchInput.toLowerCase())
