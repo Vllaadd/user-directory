@@ -9,7 +9,6 @@ class UserList extends Component {
         this.setState({searchInput: event.target.value});
     }
 
-
     render() {
         const {users} = this.props;
         const {searchInput} = this.state;
