@@ -15,6 +15,7 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "@babel/helper-compilation-targets": "^7.22.15",
     "@babel/plugin-proposal-private-property-in-object": "*"
   },
   "scripts": {
